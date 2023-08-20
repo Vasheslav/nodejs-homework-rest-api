@@ -23,7 +23,6 @@ const { validateData } = require("../../decorators/contactValidations");
 const { authenticate } = require("../../middlewares/authenticate");
 
 const { upload } = require("../../middlewares/apload");
-// const { verify } = require("jsonwebtoken");
 
 authRouter.post("/register", validateData(userAddSchema), register);
 authRouter.get("/verify/:verificationToken", verify);
